@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+
+import Header from './components/Header.js';
+import SearchBar from './components/SearchBar.js';
+import SearchResultsList from './components/SearchResultsList.js';
+import { Box } from '@mui/material';
+import { Padding } from '@mui/icons-material';
 
 function App() {
+  const [books, setBooks] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <div>
+        <SearchBar setBooks={setBooks} />
+        {books && books.length > 0 && <SearchResultsList books={books} />}
+      </div>
+    </>
   );
 }
 
