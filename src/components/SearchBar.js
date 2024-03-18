@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import TextField from '@mui/material/TextField';
-import { Container, FormGroup, FormLabel } from '@mui/material';
+import { Container, FormGroup } from '@mui/material';
 
 function SearchBar({setBooks}) {
     const [searchString, setSearchString] = useState('');

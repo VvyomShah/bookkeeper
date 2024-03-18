@@ -3,8 +3,6 @@ import { useState } from 'react';
 import Header from './components/Header.js';
 import SearchBar from './components/SearchBar.js';
 import SearchResultsList from './components/SearchResultsList.js';
-import { Box } from '@mui/material';
-import { Padding } from '@mui/icons-material';
 
 function App() {
   const [books, setBooks] = useState([]);
